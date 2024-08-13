@@ -13,7 +13,6 @@ public class Pilha {
         this.topo = -1;
     }
 
-    // Adiciona um elemento à pilha
     public void empilhar(String elemento) throws Exception {
         if (topo + 1 == capacidade) {
             throw new IllegalStateException("Pilha cheia.");
@@ -22,7 +21,6 @@ public class Pilha {
         elementos[topo] = elemento;
     }
 
-    // Remove e retorna o elemento do topo da pilha
     public String desempilhar() throws Exception {
         if (topo == -1) {
             throw new IllegalStateException("Pilha vazia.");
@@ -32,12 +30,10 @@ public class Pilha {
         return elemento;
     }
 
-    // Verifica se a pilha está vazia
     public boolean estaVazia() {
         return topo == -1;
     }
 
-    // Retorna o tamanho atual da pilha
     public int getTamanho() {
         return topo + 1;
     }
